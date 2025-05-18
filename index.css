@@ -1,0 +1,149 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f0f8ff;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color:rgb(166, 248, 248) ;
+    height: 100px;
+}
+
+/* Шапка */
+header {
+    background: linear-gradient(90deg, #0073e6, #00c6ff);
+    color: white;
+    padding: 20px 0;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    margin-left: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Герой-блок */
+.hero {
+    background: url('https://images.unsplash.com/photo-1588776814546-1d06bca2712a?auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background-color: #00c6ff;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0088cc;
+}
+
+.btn-dark {
+    background-color: #333;
+}
+
+.btn-dark:hover {
+    background-color: #000;
+}
+
+/* Секція переваг */
+.features {
+    background-color: #ffffff;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.features h2 {
+    font-size: 30px;
+    margin-bottom: 40px;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.card {
+    background-color: #f9fbff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    color: #0073e6;
+}
+
+/* CTA секція */
+.cta {
+    background: linear-gradient(90deg, #00c6ff, #0073e6);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+/* Футер */
+footer {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+}
