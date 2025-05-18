@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вхід на сайт</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class=".rectangle2">
+        <h2>Вхід</h2>
+        <form action="/login" method="POST">
+            <div class="input-group">
+                <label for="username">Ім'я користувача</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Пароль</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit">Увійти</button>
+        </form>
+        <div class="forgot-password">
+            <a href="#">Забули пароль?</a>
+        </div>
+    </div>
+</body>
+</html>
