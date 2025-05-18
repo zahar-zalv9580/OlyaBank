@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Обмін валют</title>
+        <link rel="stylesheet" href="money.css">
+        <script src="money.js"></script>
+    </head>
+
+   <body>
+
+  <div class="container">
+    <div class="language-select">
+      <label for="lang">🌐 <span id="lang-label">Мова:</span>
+        <select id="lang" onchange="changeLanguage()">
+          <option value="ua" selected>Українська</option>
+          <option value="en">English</option>
+        </select>
+      </label>
+    </div>
+
+    <h1 id="title">Конвертер валют</h1>
+
+    <label id="amount-label" for="amount">Сума:</label>
+    <input type="number" id="amount" placeholder="...">
+
+    <div class="direction-toggle">
+      <select id="fromCurrency">
+        <option value="uah">Гривня UAH</option>
+        <option value="usd">Долар USD</option>
+        <option value="eur">Євро EUR</option>
+        <option value="pln">Злотий PLN</option>
+        <option value="gbp">Фунти Стерлінги GBP</option>
+        <option value="chf">Франк CHF</option>
+        <option value="jpy">Японська Єна JPY</option>
+        <option value="cny">Китайський Юань Женьмінбі CNY</option>
+      </select>
+
+      <span>→</span>
+
+      <select id="toCurrency">
+        <option value="usd">Долар USD</option>
+        <option value="eur">Євро EUR</option>
+        <option value="pln">Злотий PLN</option>
+        <option value="gbp">Фунти Стерлінги GBP</option>
+        <option value="chf">Франки CHF</option>
+        <option value="jpy">Японська Єна JPY</option>
+        <option value="cny">Китайський Юань Женьмінбі CNY</option>
+        <option value="uah">Гривня UAH</option>
+      </select>
+    </div>
+
+    <button id="convert-btn" onclick="convert()">Конвертувати</button>
+
+    <div class="result" id="result"></div>
+
+    <div class="info">
+      <h3 id="info-title">Додаткова інформація</h3>
+      <p id="info-text">Цей конвертер дозволяє обмінювати гривні на інші валюти і навпаки. Курси є умовними. Для офіційних даних зверніться до когось, хз до кого.</p>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 OlyaBank. All rights not reserved.
+  </footer>
+
+</body>
+</html>
