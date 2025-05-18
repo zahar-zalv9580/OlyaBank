@@ -1,0 +1,53 @@
+body{
+    width: 100%;
+    padding:0px;
+    margin:0px;
+}
+
+main{
+    height: 100vh;
+    background-image: url('olybank\ background\ reg.png');
+}
+
+.reg-window {
+    display: flex;
+    flex-direction: column; /* <--- ВАЖЛИВО! */
+    align-items: center;
+    width: 450px;
+    height: 550px;
+    border-radius: 50px;
+    border: 2px solid black;
+    background-color: transparent;
+    box-shadow: 1px 1px 5px 5px black;
+}
+
+
+input{
+    background-color: white;
+    border-radius: 25px;
+    height: 35px;
+    width: 350px;
+    margin-top: 30px;
+}
+
+input:hover{
+   box-shadow: 1px 1px 5px 5px black;
+}
+
+.register-bth{
+   padding: 10px 80px;
+   border-radius: 30px;
+   border:2px solid black;
+   background-color: transparent;
+   margin:15px;
+}
+
+.register-bth:hover{
+   box-shadow: 1px 1px 5px 5px black;
+}
+
+.info-reg{
+    color:black;
+    font-size: 20px;
+    
+}
