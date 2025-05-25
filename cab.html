@@ -3,25 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Вхід на сайт</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Особистий кабінет</title>
+    <link rel="stylesheet" href="cab.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class=".rectangle2">
-        <h2>Вхід</h2>
-        <form action="/login" method="POST">
-            <div class="input-group">
-                <label for="username">Ім'я користувача</label>
-                <input type="text" id="username" name="username" required>
-            </div>
-            <div class="input-group">
-                <label for="password">Пароль</label>
-                <input type="password" id="password" name="password" required>
-            </div>
-            <button type="submit">Увійти</button>
-        </form>
-        <div class="forgot-password">
-            <a href="#">Забули пароль?</a>
+    <div class="dashboard">
+        <header class="user-header">
+            <h1>Вітаємо, Іван Іванов!</h1>
+            <div class="balance">Баланс: <strong>25 000 ₴</strong></div>
+        </header>
+
+        <!-- Швидкі операції -->
+        <div class="quick-actions">
+            <button>Переказати</button>
+            <button>Оплатити</button>
+            <button>Поповнити</button>
+            <button>Історія</button>
+        </div>
+
+        <!-- Основні розділи -->
+        <div class="main-sections">
+            <section class="accounts">
+                <h2>Мої рахунки</h2>
+                <!-- Список рахунків -->
+            </section>
+
+            <section class="transactions">
+                <h2>Останні операції</h2>
+                <!-- Таблиця транзакцій -->
+            </section>
+        </div>
+
+        <!-- Безпека -->
+        <div class="security-alert">
+            <p>Ваш пароль буде недійсний через 7 днів. <a href="#">Змінити</a></p>
         </div>
     </div>
 </body>
