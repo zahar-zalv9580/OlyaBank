@@ -6,7 +6,6 @@ body {
 }
 
 .dashboard {
-    max-width: 1000px;
     margin: 40px auto;
     padding: 20px;
     background-color: #fff;
@@ -45,7 +44,7 @@ body {
 .quick-actions button {
     flex: 1;
     padding: 12px;
-    background-color: #007bff;
+    background-color: #ff9a9e;
     color: white;
     border: none;
     border-radius: 8px;
@@ -55,7 +54,7 @@ body {
 }
 
 .quick-actions button:hover {
-    background-color: #0056b3;
+    background-color: #ff9a9e;
 }
 
 /* Основні розділи */
