@@ -1,26 +1,148 @@
 body{  font-weight: 900;
   font-family: cursive;
 }
+.poslygi{
+    flex-direction:column;
+    display: flex;
+    background-color: rgba(255, 105, 180, 0.6);
+}
 .poslygigolovna{
   display: flex;
   flex-direction:row;
   align-items:center;
-  background-color: rgba(255, 105, 180, 0.6);
+  margin:15px;
   color: white;
-  font-size: 30px;
+  font-size: 35px;
+  justify-content: center;
+}
+.poslygigolovna h1{
+  align-items:center;
+  margin:15px;
+  animation: movetextXH1 2s ; 
+}
+.poslygigolovna h2{
+      align-items:center;
+      font-size: 30px;
+      animation: movetextXH2 2.6s ; 
 }
 .img1{
-  width:170px;
+  width:130px;
   height:100px ;
-      animation: imganim 2s ease-out;
+  animation: imganim 4s;
+}
+
+.credyt{
+  background: #ffffff;
+  display: flex;
+  flex-direction:column;
+  margin:50px;
+  border: black 3px solid;
+  border-radius: 30px;
+  width:50%;
+  margin-left:25%;
+  margin-right:25%;
+}
+.inp{
+  display: flex;
+  flex-direction:row;
+  margin:10px;
+}
+.inp input{
+  border-radius: 15px;
+  margin:25px;
+  width: 170px;
+  height: 50px;
+  text-align: center;
+}
+.inp p{
+  font-size: 30px;
+  display: flex;
+  align-items:center;
+  color: rgb(82, 82, 82);
+}
+.like{
+  width: 90px;
+  height: 60px;
+  margin:15px;
+}
+.inp .footer-logo{
+  margin-left:350px;
+}
+.footer-poslyg {
+  display: flex;
+  flex-direction: row;
+  margin: 5px;
+  justify-content: center;
+}
+
+.footer-poslyg p {
+  background-color: #ff9a9e;
+  border-radius: 30px;
+  font-size: 50px;
+  color: #ffffff;
+  margin: 10px;
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.footer-poslyg p:hover {
+  background-color: #ffffff;
+  font-size: 65px;
+  border-radius: 10px;
+  color: #ff9a9e;
+}
+.footer-poslyg h4 {
+  background-color: #ffffff;
+  font-size: 35px;
+  border-radius: 30px;
+  color: #6b6b6b;
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+}
+.footer-poslyg h4:hover {
+  background-color: #575757;
+  border-radius: 10px;
+  font-size: 45px;
+  color: #ffffff;
 }
 @keyframes imganim {
-  0%{
+    00%{
+    opacity:0;
+transform: rotate(1000deg) ;
+  }
+  30%{
+    opacity:0;
+transform: rotate(1000deg) ;
+  }
+    80% {
 
-transform: translateX(1000px);
+opacity:1;
+transform: rotate(0deg) ;
+  }
+}
+
+
+
+@keyframes movetextXH2 {
+  0%{
+opacity:0;
+transform: translateX(200px);
   }
     80% {
 
 transform: translateX(0px);
+opacity:1;
+  }
+}
+@keyframes movetextXH1 {
+  0%{
+opacity:0;
+transform: translateX(-200px);
+  }
+    80% {
+
+transform: translateX(0px);
+opacity:1;
   }
 }
