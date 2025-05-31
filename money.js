@@ -10,7 +10,42 @@
       olya: 52.69,
       uah: 1.00
     };
+document.addEventListener('DOMContentLoaded', function () {
+  const footer = document.querySelector('.sigma');
+  const mainContainer = document.querySelector('.container');
+    const mainContainer1 = document.querySelector('footer');
+      const mainContainer2 = document.querySelector('nav');
+        const mainContainer3 = document.querySelector('body');
+  let isBackgroundVisible = false;
 
+  footer.addEventListener('click', function () {
+    if (!isBackgroundVisible) {
+      mainContainer.style.backgroundImage = 'url("https://i.imgflip.com/9vukb9.jpg")';
+      mainContainer.style.backgroundSize = 'cover';
+      mainContainer.style.backgroundPosition = 'center';
+      mainContainer.style.backgroundRepeat = 'no-repeat';
+      mainContainer1.style.backgroundImage = 'url("https://i.imgflip.com/9vukb9.jpg")';
+      mainContainer1.style.backgroundSize = 'cover';
+      mainContainer1.style.backgroundPosition = 'center';
+      mainContainer1.style.backgroundRepeat = 'no-repeat';
+      mainContainer2.style.backgroundImage = 'url("https://i.imgflip.com/9vukb9.jpg")';
+      mainContainer2.style.backgroundSize = 'cover';
+      mainContainer2.style.backgroundPosition = 'center';
+      mainContainer2.style.backgroundRepeat = 'no-repeat';
+      mainContainer3.style.backgroundImage = 'url("https://i.imgflip.com/9vukb9.jpg")';
+      mainContainer3.style.backgroundSize = 'cover';
+      mainContainer3.style.backgroundPosition = 'center';
+      mainContainer3.style.backgroundRepeat = 'no-repeat';
+      isBackgroundVisible = true;
+    } else {
+      mainContainer.style.backgroundImage = '';
+      mainContainer1.style.backgroundImage = '';
+      mainContainer2.style.backgroundImage = '';
+      mainContainer3.style.backgroundImage = '';
+      isBackgroundVisible = false;
+    }
+  });
+});
     const translations = {
       ua: {
         title: 'Конвертер валют',
