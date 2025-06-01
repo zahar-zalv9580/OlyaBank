@@ -7,9 +7,27 @@ class Card {
         this.procent = procent
     }
     display(){
-        if(poslygi === 2){
+        document.querySelector('.cardscredit').innerHTML += `  <div class="card">
+        <div class="inp">
+            <p>КредитКарта</p>
+            <div class="card-logo">OlyaBank</div>
+        </div>
+        <div class="infocard">
+            <div class="inp">
+                        <p>${this.cardsuma}</p>
+                                                <p>${this.cardsuma}</p>
+            </div>
+            <div class="inp">
+                        <p>${this.cardsuma}$</p>
+                        <p>срок: ${this.cardtime}</p>
+            </div>
 
-        }
+        </div>
+
+
+
+    </div>`
+
     }
 
 
@@ -119,30 +137,7 @@ if (cardname && cardsuma && cardtime && cardnumer && validName && timecredit && 
             <h2>ОляБанку</h2>
         </div>
 <div class="cardscredit">
-  <div class="card">
-        <div class="inp">
-            <p>КредитКарта</p>
-            <div class="card-logo">OlyaBank</div>
-        </div>
-        <div class="inp">
-            <input class="suma" placeholder="сума кредиту 1.5k-150k" type="number">
-            <input class="time" placeholder="срок кредиту (дні 1-720)" type="number">
-            <input class="name" placeholder="ім'я прізвище" type="text">
-            <input class="numer" placeholder="номер телефону" type="number">
-        </div>
-    </div>
-  <div class="card">
-        <div class="inp">
-            <p>КредитКарта</p>
-            <div class="card-logo">OlyaBank</div>
-        </div>
-        <div class="inp">
-            <input class="suma" placeholder="сума кредиту 1.5k-150k" type="number">
-            <input class="time" placeholder="срок кредиту (дні 1-720)" type="number">
-            <input class="name" placeholder="ім'я прізвище" type="text">
-            <input class="numer" placeholder="номер телефону" type="number">
-        </div>
-    </div>
+
 </div>
 
 
