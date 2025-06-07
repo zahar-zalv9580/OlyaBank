@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Оплата</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href = "style.css">
+  <link rel="stylesheet" href = "cab.css">
+  <link rel="stylesheet" href="payment.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+   <nav>
+    <div class="logo">OlyaBank</div>
+    <div class="nav-links">
+      <a href="index.html">Головна</a>
+      <a href="cab.html">Особистий кабінет</a>
+      <a href="services.html">Послуги</a>
+      <a href="money.html">Валюти</a>
+       <a href="login.html"><i class="fas fa-sign-in-alt"></i></a>
+    </div>
+  </nav>
+  <div class="back-button">
+    <button onclick="window.location.href='cab.html'">← Назад до кабінету</button>
+  </div>
+
+  <h2>Оплата послуг</h2>
+  <form id="pay-form">
+    <label>Опис:</label>
+    <input type="text" id="desc" required>
+    <label>Сума (₴):</label>
+    <input type="number" id="amount" required>
+    <button type="submit">Оплатити</button>
+  </form>
+
+  <script src="storage.js"></script>
+  <script>
+    document.getElementById("pay-form").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const desc = document.getElementById("desc").value;
+      const amount = parseFloat(document.getElementById("amount").value);
+      if (amount > 0 && desc.trim()) {
+        saveTransaction("Оплата: " + desc, -amount);
+        alert("Оплату проведено!");
+        window.location.href = "cab.html";
+      } else {
+        alert("Заповніть всі поля.");
+      }
+    });
+  </script>
+  <footer>
+  <div class="footer-container">
+    <div class="footer-logo">OlyaBank</div>
+
+    <div class="footer-contact">
+      <p>📧 support@olyabank.com</p>
+      <p>📞 +38 (044) 123-45-67</p>
+    </div>
+
+    <div class="footer-socials">
+      <span>🔗 Instagram</span>
+      <span>🔗 Facebook</span>
+      <span>🔗 LinkedIn</span>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 OlyaBank. Усі права захищено.</p>
+  </div>
+</footer>
+
+</body>
+</html>
+</body>
+</html>
