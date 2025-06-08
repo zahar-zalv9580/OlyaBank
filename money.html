@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OlyaBank</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="money.css">
+  <script src="money.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <nav>
+    <div class="logo">OlyaBank</div>
+    <div class="nav-links">
+      <a href="index.html">Головна</a>
+      <a href="cab.html">Особистий кабінет</a>
+      <a href="services.html">Послуги</a>
+      <a href="money.html">Валюти</a>
+       <a href="login.html"><i class="fas fa-sign-in-alt"></i></a>
+    </div>
+  </nav>
+
+
+   <body>
+
+  <div class="container">
+    <div class="language-select">
+      <label for="lang">🌐 <span id="lang-label">Мова:</span>
+        <select id="lang" onchange="changeLanguage()">
+          <option value="ua" selected>Українська</option>
+          <option value="en">English</option>
+        </select>
+      </label>
+    </div>
+
+    <h1 id="title">Конвертер валют</h1>
+
+    <label id="amount-label" for="amount">Сума:</label>
+    <input type="number" id="amount" placeholder="...">
+
+    <div class="direction-toggle">
+      <select id="fromCurrency">
+        <option value="uah">Гривня UAH</option>
+        <option value="usd">Долар USD</option>
+        <option value="eur">Євро EUR</option>
+        <option value="pln">Злотий PLN</option>
+        <option value="gbp">Фунти Стерлінги GBP</option>
+        <option value="chf">Франк CHF</option>
+        <option value="jpy">Японська Єна JPY</option>
+        <option value="cny">Китайський Юань Женьмінбі CNY</option>
+        <option value="log">Логік LOG</option>
+        <option value="olya">ОляКоїн OLYA</option>
+      </select>
+
+      <span class="sigma">→</span>
+
+      <select id="toCurrency">
+        <option value="usd">Долар USD</option>
+        <option value="eur">Євро EUR</option>
+        <option value="pln">Злотий PLN</option>
+        <option value="gbp">Фунти Стерлінги GBP</option>
+        <option value="chf">Франки CHF</option>
+        <option value="jpy">Японська Єна JPY</option>
+        <option value="cny">Китайський Юань Женьмінбі CNY</option>
+        <option value="uah">Гривня UAH</option>
+        <option value="log">Логік LOG</option>
+        <option value="olya">ОляКоїн OLYA</option>
+      </select>
+    </div>
+
+    <button id="convert-btn" onclick="convert()">Конвертувати</button>
+
+    <div class="result" id="result"></div>
+
+    <div class="info">
+      <h3 id="info-title">Додаткова інформація</h3>
+      <p id="info-text">Цей конвертер дозволяє обмінювати гривні на інші валюти і навпаки. Курси є умовними. Для офіційних даних зверніться до когось, хз до кого.</p>
+    </div>
+  </div>
+
+    <footer>
+  <div class="footer-container">
+    <div class="footer-logo">OlyaBank</div>
+
+    <div class="footer-contact">
+      <p>📧 support@olyabank.com</p>
+      <p>📞 +38 (044) 123-45-67</p>
+    </div>
+
+    <div class="footer-socials">
+      <span>🔗 Instagram</span>
+      <span>🔗 Facebook</span>
+      <span>🔗 LinkedIn</span>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 OlyaBank. All rights not reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
