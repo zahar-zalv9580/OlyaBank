@@ -20,27 +20,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
   footer.addEventListener('click', function () {
     if (!isBackgroundVisible) {
-      mainContainer.style.backgroundImage = 'url("https://i.imgflip.com/9vukb9.jpg")';
-      mainContainer.style.backgroundSize = 'cover';
-      mainContainer.style.backgroundPosition = 'center';
-      mainContainer.style.backgroundRepeat = 'no-repeat';
-      mainContainer1.style.backgroundImage = 'url("https://i.imgflip.com/9vukb9.jpg")';
-      mainContainer1.style.backgroundSize = 'cover';
-      mainContainer1.style.backgroundPosition = 'center';
-      mainContainer1.style.backgroundRepeat = 'no-repeat';
-      mainContainer2.style.backgroundImage = 'url("https://i.imgflip.com/9vukb9.jpg")';
-      mainContainer2.style.backgroundSize = 'cover';
-      mainContainer2.style.backgroundPosition = 'center';
-      mainContainer2.style.backgroundRepeat = 'no-repeat';
       mainContainer3.style.backgroundImage = 'url("https://i.imgflip.com/9vukb9.jpg")';
       mainContainer3.style.backgroundSize = 'cover';
       mainContainer3.style.backgroundPosition = 'center';
       mainContainer3.style.backgroundRepeat = 'no-repeat';
       isBackgroundVisible = true;
     } else {
-      mainContainer.style.backgroundImage = '';
-      mainContainer1.style.backgroundImage = '';
-      mainContainer2.style.backgroundImage = '';
       mainContainer3.style.backgroundImage = '';
       isBackgroundVisible = false;
     }
@@ -98,3 +83,21 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     window.onload = changeLanguage;
+   let olyaCoins = 0;
+
+window.addEventListener('DOMContentLoaded', function () {
+  const easter = document.querySelector('.footer-logo');
+  if (easter) {
+    easter.addEventListener('click', function () {
+      const balance = document.getElementById('olya-balance');
+
+      olyaCoins += 1;
+      balance.textContent = `💰 OLYA: ${olyaCoins}`;
+
+      balance.style.transform = 'scale(1.3)';
+      setTimeout(() => {
+        balance.style.transform = 'scale(1)';
+      }, 300);
+    });
+  }
+});
