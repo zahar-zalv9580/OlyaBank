@@ -101,3 +101,23 @@ window.addEventListener('DOMContentLoaded', function () {
     });
   }
 });
+
+function toggleDarkMode() {
+  const body = document.body;
+  const btn = document.getElementById('theme-btn');
+  const isDark = body.classList.toggle('dark');
+
+  localStorage.setItem('theme', isDark ? 'dark' : 'light');
+  btn.textContent = isDark ? '☀️' : '🌒';
+}
+
+// Перевірка теми при завантаженні
+window.addEventListener('DOMContentLoaded', () => {
+  const savedTheme = localStorage.getItem('theme');
+  const btn = document.getElementById('theme-btn');
+
+  if (savedTheme === 'dark') {
+    document.body.classList.add('dark');
+    if (btn) btn.textContent = '☀️';
+  }
+});
