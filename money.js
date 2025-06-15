@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
   footer.addEventListener('click', function () {
     if (!isBackgroundVisible) {
       mainContainer3.style.backgroundImage = 'url("https://i.imgflip.com/9xgy1j.gif")';
-      mainContainer3.style.backgroundSize = '100%';
+      mainContainer3.style.backgroundSize = 'cover';
       mainContainer3.style.backgroundPosition = 'center';
       mainContainer3.style.backgroundRepeat = 'no-repeat';
       isBackgroundVisible = true;
