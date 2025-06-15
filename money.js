@@ -20,8 +20,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
   footer.addEventListener('click', function () {
     if (!isBackgroundVisible) {
-      mainContainer3.style.backgroundImage = 'url("https://i.imgflip.com/9vukb9.jpg")';
-      mainContainer3.style.backgroundSize = 'cover';
+      mainContainer3.style.backgroundImage = 'url("https://i.imgflip.com/9xgy1j.gif")';
+      mainContainer3.style.backgroundSize = '100%';
       mainContainer3.style.backgroundPosition = 'center';
       mainContainer3.style.backgroundRepeat = 'no-repeat';
       isBackgroundVisible = true;
@@ -52,24 +52,36 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     };
 
-    function convert() {
-      const amount = parseFloat(document.getElementById('amount').value);
-      const from = document.getElementById('fromCurrency').value;
-      const to = document.getElementById('toCurrency').value;
-      const lang = document.getElementById('lang').value;
-      const resultDiv = document.getElementById('result');
+    const history = JSON.parse(localStorage.getItem('conversionHistory')) || [];
 
-      if (isNaN(amount) || amount <= 0) {
-        resultDiv.textContent = translations[lang].invalidInput;
-        return;
-      }
+function convert() {
+  const amount = parseFloat(document.getElementById('amount').value);
+  const from = document.getElementById('fromCurrency').value;
+  const to = document.getElementById('toCurrency').value;
+  const lang = document.getElementById('lang').value;
+  const resultDiv = document.getElementById('result');
 
-      const inUAH = amount * rates[from];
-      const converted = inUAH / rates[to];
+  if (isNaN(amount) || amount <= 0) {
+    resultDiv.textContent = translations[lang].invalidInput;
+    return;
+  }
 
-      resultDiv.textContent = `≈ ${converted.toFixed(2)} ${to.toUpperCase()}`;
-    }
+  const inUAH = amount * rates[from];
+  const converted = inUAH / rates[to];
+  const formatted = `≈ ${converted.toFixed(2)} ${to.toUpperCase()}`;
 
+  resultDiv.textContent = formatted;
+
+  // Додаємо до історії
+  const record = `${amount} ${from.toUpperCase()} → ${formatted}`;
+  history.unshift(record);
+  if (history.length > 5) history.pop(); // максимум 5 записів
+
+  // Зберігаємо в localStorage
+  localStorage.setItem('conversionHistory', JSON.stringify(history));
+
+  renderHistory();
+}
     function changeLanguage() {
       const lang = document.getElementById('lang').value;
       const t = translations[lang];
@@ -121,3 +133,8 @@ window.addEventListener('DOMContentLoaded', () => {
     if (btn) btn.textContent = '☀️';
   }
 });
+
+function renderHistory() {
+  const historyList = document.getElementById('history-list');
+  historyList.innerHTML = history.map(item => `<li>${item}</li>`).join('');
+}
