@@ -6,15 +6,66 @@ body{  font-weight: 900;
     flex-direction:column;
     display: flex;
     background:  rgba(255, 156, 212, 1);
-
+    background-size: cover;
+    background-repeat: no-repeat;
   }
+.tys{
+  position: absolute;
+  display: none;
+  pointer-events:none;
+  width:2000px;
+  height:900px;
+  Z-index:9000000000000;
+  animation: biba 11s;
+  transform: translateX(250px) translateY(-150px);
+}
+@keyframes biba {
+  85%{
+    filter: brightness(9.9) contrast(1.1) sepia(0.6) saturate(4);
+  }
+}
+.styleset{
+  position: absolute;
+  background: #6b6b6b;
+  display: none;
+  flex-direction: row;
+  z-index: 999;
+  border-radius: 10px;
+}
+
+.styleset1{
+  background: #6b6b6b;
+  margin:50px;
+  display: none;
+  position: absolute;
+  transform: translateX(300px);
+  z-index: 90000;
+}
+.styleset2{
+  display: flex;
+  flex-direction: column;
+  font-size:20px;
+}
+.styleset2 p{
+  margin: 5px
+}
+.styleset3{
+  display: flex;
+  margin: 15px
+}
 .smile {
   position: absolute;
   display: flex;
   z-index: 0;
-  font-size:40px
-}
 
+
+}
+@keyframes smileM{
+  0%{opacity:0;}
+  25%{opacity:1;}
+
+
+100%{transform: translateX(-800px);}}
 
 
 .poslygigolovna{
@@ -75,11 +126,10 @@ body{  font-weight: 900;
   transition: transform 0.5s ease;
   z-index:90000;
 
+
 }
-.card .inp p{
+.card .inp p {
   color: rgb(255, 255, 255);
-
-
 }
 .allinfocard{
   background: url("https://img.freepik.com/free-photo/a-pink-background-with-a-black-and-white-floral-design_1340-42488.jpg");
@@ -94,6 +144,9 @@ body{  font-weight: 900;
   z-index:2000;
   opacity:0;
   position: absolute;
+  transform: translateX(-400px);
+  flex-direction:column;
+  font-size:22px;
 }
 .infocard{
   color: #ffffff;
@@ -170,6 +223,24 @@ body{  font-weight: 900;
   font-size: 35px;
   color: #ffffff;
 }
+.But{
+  margin-bottom:30px;
+}
+.povernenya .sc .oplatakredit{
+  font-size: 35px;
+  margin:15px;
+}
+.angry{
+  width:1300px;
+  height:1000px;
+  opacity: 0;
+  position: absolute;
+  overflow-x: hidden;
+  display: none;
+  transform: translateY(-900px) translateX(300px); 
+  pointer-events:none;
+  z-index:10000000;
+}
 .cardscredit{
   display: flex;
   flex-direction: row-reverse;
@@ -179,7 +250,7 @@ body{  font-weight: 900;
 .cardscredit2{
   display: flex;
   flex-direction: row-reverse;
-  z-index:90000;
+  z-index:7000;
 }
 .skip-right{
   display: flex;
